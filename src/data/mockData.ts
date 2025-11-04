@@ -31,7 +31,7 @@ export const mockRfps = [
         "bookingId": 3,
         "hotelId": 101,
         "eventId": 1,
-        "guestName": "Bob Johnson",
+        "guestName": "Bob Johnsonsss",
         "guestPhoneNumber": "3456789012",
         "checkInDate": "2025-09-03",
         "checkOutDate": "2025-09-07"
