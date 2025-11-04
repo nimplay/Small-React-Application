@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RFP } from '../../../types/rfp';
 import { RfpCard } from './RfpCard';
+import { EventHeader } from '../../ui/EventHeader';
 
 interface RfpListProps {
   rfps: RFP[];
@@ -25,10 +26,26 @@ export const RfpList: React.FC<RfpListProps> = ({ rfps, isLoading }) => {
     );
   }
 
+  const groupedByEvent = rfps.reduce((acc, rfp) => {
+    const eventName = rfp.eventName;
+    if (!acc[eventName]) {
+      acc[eventName] = [];
+    }
+    acc[eventName].push(rfp);
+    return acc;
+  }, {} as Record<string, RFP[]>);
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {rfps.map((rfp) => (
-        <RfpCard key={rfp.roomingListId} rfp={rfp} />
+    <div className="space-y-8">
+      {Object.entries(groupedByEvent).map(([eventName, eventRfps]) => (
+        <div key={eventName} className="space-y-4">
+          <EventHeader eventName={eventName} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {eventRfps.map((rfp) => (
+              <RfpCard key={rfp.roomingListId} rfp={rfp} />
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   );
