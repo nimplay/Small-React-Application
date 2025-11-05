@@ -40,10 +40,16 @@ export const RfpList: React.FC<RfpListProps> = ({ rfps, isLoading }) => {
       {Object.entries(groupedByEvent).map(([eventName, eventRfps]) => (
         <div key={eventName} className="space-y-4">
           <EventHeader eventName={eventName} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {eventRfps.map((rfp) => (
-              <RfpCard key={rfp.roomingListId} rfp={rfp} />
-            ))}
+          <div className="relative">
+            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+              <div className="flex space-x-6 min-w-min">
+                {eventRfps.map((rfp) => (
+                  <div key={rfp.roomingListId} className="flex-none w-80">
+                    <RfpCard rfp={rfp} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       ))}
