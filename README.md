@@ -2,28 +2,28 @@
 A modern application for managing Request for Proposals (RFP) built with React, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
-RFP Management: Create, view, and filter proposals
+**RFP Management:** Create, view, and filter proposals
 
-Modern Interface: Responsive design with Tailwind CSS
+**Modern Interface:** Responsive design with Tailwind CSS
 
-Type Safety: Built with TypeScript
+**Type Safety:** Built with TypeScript
 
-Advanced Filtering: Search and filter by status and agreement type
+**Advanced Filtering:** Search and filter by status and agreement type
 
-Smart Grouping: Automatic organization by events
+**Smart Grouping:** Automatic organization by events
 
-Horizontal Scroll: Smooth card navigation
+**Horizontal Scroll:** Smooth card navigation
 
 ## 🛠️ Tech Stack
-Frontend: React 18 + TypeScript
+**Frontend:** React 18 + TypeScript
 
-Build Tool: Vite
+**Build Tool:** Vite
 
-Styling: Tailwind CSS
+**Styling:** Tailwind CSS
 
-State Management: Zustand
+**State Management:** Zustand
 
-Icons: Integrated SVG
+**Icons:** Integrated SVG
 
 ## 📦 Installation
 ### Prerequisites
@@ -32,20 +32,20 @@ Node.js 18+
 npm or yarn
 
 ### Setup Steps
-1. Clone the repository
+**1. Clone the repository**
 
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/nimplay/Small-React-Application.git)
 cd rfp-management-system
 
-2. Install dependencies
+**2. Install dependencies**
 
 npm install or yarn install
 
-3. Run in development mode
+**3. Run in development mode**
 
 npm run dev or yarn dev
 
-4. Open in browser
+**4. Open in browser**
 
 http://localhost:5173
 
