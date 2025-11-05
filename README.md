@@ -51,31 +51,31 @@ http://localhost:5173
 
 ## 🏗️ Available Scripts
 
-# Development
+### Development
 npm run dev or npx vite
 
-# Production build
+### Production build
 npm run build
 
-# Preview build
+### Preview build
 npm run preview
 
-# Linting
+### Linting
 npm run lint
 
-# Type checking
+### Type checking
 npm run type-check
 
 ## 🏛️ Project Structure
 
 src/
 ├── components/
-│   ├── ui/           # Reusable UI components
-│   └── features/     # Feature-specific components
-├── stores/           # Global state with Zustand
-├── types/            # TypeScript definitions
-├── utils/            # Utility functions
-└── data/             # Mock data and constants
+│ ├── ui/ # Reusable UI components
+│ └── features/ # Feature-specific components
+├── stores/ # Global state with Zustand
+├── types/ # TypeScript definitions
+├── utils/ # Utility functions
+└── data/ # Mock data and constants
 
 ## 🎯 Key Components
 
