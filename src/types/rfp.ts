@@ -15,13 +15,13 @@ export interface RFP {
   hotelId: number;
   rfpName: string;
   cutOffDate: string;
-  status: 'completed' | 'received' | 'archived' | 'Confirmed';
+  status: 'completed' | 'received' | 'archived' | 'confirmed';
   agreement_type: 'leisure' | 'staff';
   bookings: Booking[];
 }
 
 export interface FilterState {
   searchQuery: string;
-  statusFilter: string | null;
+  statusFilter: string[];
   agreementTypeFilter: string | null;
 }

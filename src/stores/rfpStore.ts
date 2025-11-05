@@ -7,8 +7,8 @@ interface RFPStore {
   filters: FilterState;
   setRfps: (rfps: RFP[]) => void;
   setSearchQuery: (query: string) => void;
-  setStatusFilter: (status: string | null) => void;
-  setAgreementTypeFilter: (type: string | null) => void; // ← Esto debe estar aquí
+  setStatusFilter: (status: string[]) => void;
+  setAgreementTypeFilter: (type: string | null) => void;
   applyFilters: () => void;
 }
 
@@ -17,7 +17,7 @@ export const useRFPStore = create<RFPStore>((set, get) => ({
   filteredRfps: [],
   filters: {
     searchQuery: '',
-    statusFilter: null,
+    statusFilter: [],
     agreementTypeFilter: null,
   },
   setRfps: (rfps) => set({ rfps, filteredRfps: rfps }),
@@ -33,7 +33,7 @@ export const useRFPStore = create<RFPStore>((set, get) => ({
     }));
     get().applyFilters();
   },
-  setAgreementTypeFilter: (agreementTypeFilter) => { // ← Y esto debe estar implementado
+  setAgreementTypeFilter: (agreementTypeFilter) => {
     set((state) => ({
       filters: { ...state.filters, agreementTypeFilter }
     }));
@@ -49,7 +49,7 @@ export const useRFPStore = create<RFPStore>((set, get) => ({
         rfp.eventName.toLowerCase().includes(searchQuery.toLowerCase());
 
       const matchesStatus =
-        !statusFilter || rfp.status.toLowerCase() === statusFilter.toLowerCase();
+        statusFilter.length === 0 || statusFilter.includes(rfp.status);
 
       const matchesAgreementType =
         !agreementTypeFilter || rfp.agreement_type === agreementTypeFilter;

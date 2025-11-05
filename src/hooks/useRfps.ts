@@ -10,7 +10,7 @@ export const useRfps = () => {
     filters,
     setSearchQuery,
     setStatusFilter,
-    setAgreementTypeFilter // ← Asegúrate de que esto esté aquí
+    setAgreementTypeFilter 
   } = useRFPStore();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const useRfps = () => {
     filters,
     setSearchQuery,
     setStatusFilter,
-    setAgreementTypeFilter, // ← Asegúrate de que esto esté en el return
+    setAgreementTypeFilter,
     isLoading: filteredRfps.length === 0 && mockRfps.length > 0,
   };
 };

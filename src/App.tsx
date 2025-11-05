@@ -1,6 +1,5 @@
 import React from "react";
 import { useRfps } from "./hooks/useRfps";
-import { Sidebar } from "./components/layout/Sidebar";
 import { RfpFilters } from "./components/features/rfps/RfpFilters";
 import { RfpList } from "./components/features/rfps/RfpList";
 
@@ -17,12 +16,11 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="flex">
-        <Sidebar />
-        <main className="flex-1 p-6 lg:ml-64">
+        <main className="flex-1 p-6">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <h1 className="text-2xl font-bold text-gray-900">
-                Rooming List Management:
+                Rooming List Management: Events
               </h1>
             </div>
 
